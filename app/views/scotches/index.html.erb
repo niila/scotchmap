@@ -1,0 +1,34 @@
+<h1>Places to visit in 2016</h1> 
+
+
+<br> 
+<%= gmaps4rails(@pins) %> 
+<%= yield :scripts %>
+<br>
+<br>
+<%= link_to 'Add new Scotch tasted', new_scotch_path, class: 'btn' %>
+<br>
+<br>
+<h3> Tasted and found lovely:</h3>
+<br>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Area</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @scotches.each do |scotch| %>
+  <tr>
+    <td><%= scotch.name %></td>
+    <td><%= scotch.area %></td>
+    <td><%= link_to 'Show', scotch %></td>
+    <td><%= link_to 'Edit', edit_scotch_path(scotch) %></td>
+    <td><%= link_to 'Delete', scotch, method: :delete, data: { confirm: 'Really, totally, absolutely for reals?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+

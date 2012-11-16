@@ -1,0 +1,37 @@
+<%= form_for(@scotch, :html => {:multipart => true}) do |f| %>
+  <% if @scotch.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@scotch.errors.count, "error") %> prohibited this scotch from being saved:</h2>
+
+      <ul>
+      <% @scotch.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :area %><br />
+    <%= f.text_field :area %>
+  </div>
+  <div class="field">
+    <%= f.label :taste %><br />
+    <%= f.text_area :taste %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_area :address %>
+  </div>
+  <div class="field">
+    <%= f.label :picture %><br />
+    <%= f.file_field :picture %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
