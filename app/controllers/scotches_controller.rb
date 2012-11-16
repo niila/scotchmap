@@ -1,5 +1,5 @@
 class ScotchesController < ApplicationController
-  http_basic_authenticate_with name: "nila", password: "rgcttiM2012", 
+  http_basic_authenticate_with name: ENV['SCOTCHMAP_NAME'], password: ENV['SCOTCHMAP_PASSWORD'], 
     except: ['index', 'show']
 
   # GET /scotches

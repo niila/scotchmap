@@ -11,20 +11,14 @@
 </p>
 
 <p>
-  <b>Taste:</b>
-  <%= @scotch.taste %>
-</p>
-
-<p>
   <b>Address:</b>
   <%= @scotch.address %>
 </p>
 
 <p>
-  <b>Picture:</b>
-  <%= image_tag(@scotch.picture_url, :width => 600) if @scotch.picture.present? %>
+  <b>Taste:</b>
+  <%= @scotch.taste %>
 </p>
-
 
 <%= link_to 'Edit', edit_scotch_path(@scotch) %> |
 <%= link_to 'Back', scotches_path %>
