@@ -1,6 +1,17 @@
 class ScotchesController < ApplicationController
-  http_basic_authenticate_with name: ENV['SCOTCHMAP_NAME'], password: ENV['SCOTCHMAP_PASSWORD'], 
+  def self.scotchmap_name
+    ENV['SCOTCHMAP_NAME'] || "dev-name"
+  end
+
+  def self.scotchmap_password
+    ENV['SCOTCHMAP_PASSWORD'] || "dev-password"
+  end
+
+  http_basic_authenticate_with(
+    name: scotchmap_name,
+    password: scotchmap_password,
     except: ['index', 'show']
+  )
 
   # GET /scotches
   # GET /scotches.json
