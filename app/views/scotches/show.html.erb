@@ -20,5 +20,10 @@
   <%= @scotch.taste %>
 </p>
 
+<p>
+  <b>Label:</b>
+  <%= image_tag(@scotch.picture) %>
+</p>
+
 <%= link_to 'Edit', edit_scotch_path(@scotch) %> |
 <%= link_to 'Back', scotches_path %>

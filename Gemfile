@@ -12,6 +12,7 @@ group :production do
   gem 'pg'
 end
 gem 'carrierwave'
+gem 'cloudinary'
 gem 'geocoder'
 gem 'gmaps4rails'
 
