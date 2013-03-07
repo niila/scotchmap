@@ -6,8 +6,7 @@ class Scotch < ActiveRecord::Base
 	attr_accessible :area, :address, :taste, :name #:picture
 
   def gmaps4rails_infowindow
-  # add here whatever html content you desire, it will be displayed when users clicks on the marker
-  "<b> #{name}</b>, #{area} <br/> #{taste}"
+    "<b> #{name}</b>, #{area} <br/> #{taste} "  #<br/> <img src=\"#{self.picture}\">
   end
 end
 
