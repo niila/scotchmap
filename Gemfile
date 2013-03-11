@@ -16,6 +16,9 @@ gem 'cloudinary'
 gem 'geocoder'
 gem 'gmaps4rails'
 
+gem 'rspec-rails'
+gem 'capybara-webkit'
+gem 'launchy'
 
 # Gems used only for assets and not required
 # in production environments by default.
